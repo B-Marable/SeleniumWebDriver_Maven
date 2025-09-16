@@ -17,13 +17,15 @@ public class FrameExample {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 		
-		driver.switchTo().frame("frame1");
+		// frame 1
+		driver.switchTo().frame("frame1"); 
 		WebElement frameHeader = driver.findElement(By.id("sampleHeading"));
 		System.out.println("Frame 1 Content: " + frameHeader.getText());
 		
 		driver.switchTo().defaultContent(); // switch back to main content
 		
-		driver.switchTo().frame("frame2");
+		// frame 2
+		driver.switchTo().frame("frame2"); 
 		WebElement frame2Header = driver.findElement(By.id("sampleHeading"));
 		System.out.println("Frame 2 Content: " + frame2Header.getText());
 
